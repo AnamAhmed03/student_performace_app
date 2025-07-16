@@ -1,61 +1,87 @@
 # Student Performance Prediction
 
-This project applies machine learning techniques to predict student academic performance based on demographic, social, and academic features. The goal is to identify factors that influence performance and provide early intervention insights.
+This project applies machine learning techniques to predict student academic performance based on demographic, social, and academic features. The goal is to identify the factors that most influence performance and provide insights for early interventions in the education system.
+
 
 
 ## Problem Statement
 
-Predict the final performance of students using input features such as study time, absences, parental education, previous grades, and more. The problem can be approached as a regression task (predicting final grade) or classification (pass/fail).
+The objective is to analyze how student performance in math, reading, and writing is affected by:
+
+- Gender
+- Race/ethnicity
+- Parental level of education
+- Lunch type (standard vs. free/reduced)
+- Completion of test preparation course
+
+
+
+##  Dataset
+
+- **Source**: [Kaggle - Students Performance in Exams](https://www.kaggle.com/datasets/spscientist/students-performance-in-exams?datasetId=74977)
+- **Format**: CSV
+- **Shape**: 1000 rows × 8 columns
+
+**Key features:**
+- Demographics: `gender`, `race/ethnicity`
+- Parental & socioeconomic: `parental level of education`, `lunch`
+- Academic: `math score`, `reading score`, `writing score`
+- Additional feature added: `average score` (mean of the three scores)
 
 ---
 
-## Dataset
+##  Data Preprocessing
 
-- Source: UCI Machine Learning Repository – Student Performance Dataset
-- Format: CSV
-- Key features:
-  - Demographics: gender, age
-  - Family: parental education, relationship status, support
-  - Academic: G1, G2, study time, absences, failures
-  - Lifestyle: internet access, health, activities
+- Checked for null values
+- Encoded categorical variables using `LabelEncoder`
+- Standardized numerical features using `StandardScaler`
+- Create an additional column `total_score` = sum of all three scrores
+- Created an additional column `average` = mean of all three scores
 
----
 
-## Data Preprocessing
 
-- Checked and handled missing/null values
-- Converted categorical variables using label encoding and one-hot encoding
-- Normalized numerical features where necessary
-- Removed redundant or low-correlation features
+## Exploratory Data Analysis (EDA)
 
----
+Notebook: [`EDA STUDENT PERFORMANCE.ipynb`](https://github.com/krishnaik06/mlproject/blob/main/notebook/1%20.%20EDA%20STUDENT%20PERFORMANCE%20.ipynb)
 
-## Machine Learning Models Used
+- Distribution plots for scores
+- Count plots for categorical variables
+- Bar charts to compare group performance
+- Grouped analysis based on lunch, test prep, and parental education
 
-| Model               | Purpose                               |
-|--------------------|----------------------------------------|
-| Linear Regression   | Simple baseline regression             |
-| Random Forest       | Ensemble model with better generalization |
-| XGBoost             | Optimized boosting algorithm           |
-| Decision Tree       | Interpretable baseline model           |
 
----
 
-## Evaluation Metrics
+##  Model Training
 
+Notebook: [`MODEL TRAINING.ipynb`](https://github.com/krishnaik06/mlproject/blob/main/notebook/2.%20MODEL%20TRAINING.ipynb)
+
+**Algorithms Used:**
+
+| Model              | Description                        |
+|-------------------|------------------------------------|
+| Linear Regression | Baseline model                     |
+| Ridge & Lasso     | Regularized regression models      |
+| Random Forest     | High-performing ensemble model     |
+| Decision Tree     | Simple interpretable model         |
+
+**Evaluation Metrics:**
 - R² Score
-- Mean Absolute Error (MAE)
-- Mean Squared Error (MSE)
-- Accuracy (if formulated as classification)
+- MAE (Mean Absolute Error)
+- RMSE (Root Mean Squared Error)
+
+**Best Model:** Linear Regressor  
+**R² Score:** ~0.88 on test data
 
 ---
 
-## How to Run
+##  How to Run This Project Locally
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/student-performance-ml.git
-   cd student-performance-ml
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/student-performance-predictor.git
+cd student-performance-predictor
+
 
 
 # Create a virtual env
