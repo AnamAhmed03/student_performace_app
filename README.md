@@ -42,7 +42,7 @@ The objective is to analyze how student performance in math, reading, and writin
 
 ## Exploratory Data Analysis (EDA)
 
-Notebook: [`EDA STUDENT PERFORMANCE.ipynb`](https://github.com/krishnaik06/mlproject/blob/main/notebook/1%20.%20EDA%20STUDENT%20PERFORMANCE%20.ipynb)
+Notebook: [`EDA STUDENT PERFORMANCE.ipynb`](https://github.com/AnamAhmed03/student_performace_app/blob/main/notebook/1%20.%20EDA%20STUDENT%20PERFORMANCE%20.ipynb)
 
 - Distribution plots for scores
 - Count plots for categorical variables
@@ -53,7 +53,7 @@ Notebook: [`EDA STUDENT PERFORMANCE.ipynb`](https://github.com/krishnaik06/mlpro
 
 ##  Model Training
 
-Notebook: [`MODEL TRAINING.ipynb`](https://github.com/krishnaik06/mlproject/blob/main/notebook/2.%20MODEL%20TRAINING.ipynb)
+Notebook: [`MODEL TRAINING.ipynb`](https://github.com/AnamAhmed03/student_performace_app/blob/main/notebook/2.%20MODEL%20TRAINING.ipynb)
 
 **Algorithms Used:**
 
@@ -79,9 +79,8 @@ Notebook: [`MODEL TRAINING.ipynb`](https://github.com/krishnaik06/mlproject/blob
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/student-performance-predictor.git
+git clone https://github.com/AnamAhmed03/student_performace_app.git
 cd student-performance-predictor
-
 
 
 # Create a virtual env
