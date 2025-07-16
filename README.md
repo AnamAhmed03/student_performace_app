@@ -80,7 +80,7 @@ Notebook: [`MODEL TRAINING.ipynb`](https://github.com/AnamAhmed03/student_perfor
 
 ```bash
 git clone https://github.com/AnamAhmed03/student_performace_app.git
-cd student-performance-predictor
+cd student_performance_app
 
 
 # Create a virtual env
