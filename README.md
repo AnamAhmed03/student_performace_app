@@ -105,6 +105,10 @@ The project follows a modular structure with reusable components.
 Raw CSV → Data Ingestion → Data Transformation → Model Training → Evaluation → Save Best Model
 ```
 
+## Deployment
+The project is also compatible with deployment on AWS Elastic Beanstalk using the Python platform.
+To deploy this project on AWS Elastic Beanstalk (Python platform), include a .ebextensions/python.config file in root directory.
+
 ---
 
 ## Code Execution
